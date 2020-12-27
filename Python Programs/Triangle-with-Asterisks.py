@@ -86,4 +86,27 @@ i g h y G s G v t B
 f s h w z k b z o E
 
 """
-
+def Tra(X1,Y1,X2,Y2):
+    while X1!=X2 or Y1!=Y2:
+        List[X1][Y1]='*'
+        if X1!=X2:
+            if X1>X2:
+                X1-=1
+            else:
+                X1+=1
+        if Y1!=Y2:
+            if Y1>Y2:
+                Y1-=1
+            else:
+                Y1+=1
+Row,Col=map(int,input().split())
+List=[input().split() for i in range(Row)]
+X1,Y1=map(int,input().split())
+X2,Y2=map(int,input().split())
+X3,Y3=map(int,input().split())
+X1,X2,X3,Y1,Y2,Y3=X1-1,X2-1,X3-1,Y1-1,Y2-1,Y3-1
+Tra(X1,Y1,X2,Y2)
+Tra(X2,Y2,X3,Y3)
+Tra(X3,Y3,X1,Y1)
+for i in List:
+    print(*i)
