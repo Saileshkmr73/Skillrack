@@ -1,3 +1,4 @@
+/*
 Property Inheritance in Family:
 
 The hierarchy of a family is given as the input. 
@@ -71,7 +72,7 @@ Magesh
 
 Output:
 5000
-
+*/
 
 #include<stdio.h>
 
