@@ -43,3 +43,10 @@ Input:
 Output:
 13 15 23
 """
+
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(0,n,6):
+    a[i:i+3],a[i+3:i+6]=a[i+3:i+6],a[i:i+3]
+for i in range(0,n,2):
+    print(a[i]+a[i+1],end=" ")
