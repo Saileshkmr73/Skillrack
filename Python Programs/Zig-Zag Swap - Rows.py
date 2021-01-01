@@ -71,3 +71,18 @@ Output:
 25 26 51 66
 
 """
+
+ROW,COL=map(int,input().split())
+LIST1=[ list(map(int,input().split())) for i in range(ROW) ]
+for index1 in range(0,ROW,2):
+    ListX1,ListX2=[],[]
+    for index2 in range(COL//2):
+        ListX1.append(LIST1[index1][index2])
+    for index2 in range(COL//2,COL):
+        ListX2.append(LIST1[ROW-1-index1][index2])
+    for index2 in range(COL//2):
+        LIST1[index1][index2]=ListX2[index2]
+    for index2 in range(COL//2,COL):
+        LIST1[ROW-1-index1][index2]=ListX1.pop(0)
+for index1 in LIST1:
+    print(*index1)
