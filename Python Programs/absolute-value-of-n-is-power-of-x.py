@@ -1,4 +1,4 @@
-﻿Absolute Value of N is Power of X
+﻿"""
 Absolute Value of N is Power of X: The program accepts two integers N and X as input. The program prints YES if the absolute value of N is a power of X. Else the program prints NO.
 Boundary Condition(s):
 -1015 <= N <= 1015
@@ -17,6 +17,8 @@ Input:
 26 3
 Output:
 NO
+"""
+
 def power(b,a):
   p=1
   while(p<a):p*=b
