@@ -61,3 +61,18 @@ Output:
 dwoBu
 
 """
+
+ROW,COL = map(int,input().split())
+MATRIX = [input().split() for element in range(ROW)]
+X,Y = map(int,input().split())
+X,Y = X-1,Y-1
+A1,A2,A3,A4 = '','','',''
+for index in range(X,-1,-1):
+    A1 += MATRIX[index][Y]
+for index2 in range(Y,COL):
+    A2 += MATRIX[X][index2]
+for index in range(X,ROW):
+    A3 += MATRIX[index][Y]
+for index2 in range(Y,-1,-1):
+    A4 += MATRIX[X][index2]
+print(max([A1,A2,A3,A4],key = len))
