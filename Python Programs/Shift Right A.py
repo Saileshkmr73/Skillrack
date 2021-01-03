@@ -55,3 +55,12 @@ Output:
 - - - - A
 
 """
+
+Row,Col=map(int,input().split())
+Matrix=[list(map(str,input().split())) for index in range(Row)]
+for index in range(Row):
+    co=0
+    for element in range(Col):
+        if(Matrix[index][element]=="A"):
+            co+=1 
+    print("- "*(Col-co)+"A "*co)
