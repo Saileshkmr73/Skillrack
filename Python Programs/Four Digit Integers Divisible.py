@@ -36,3 +36,13 @@ Output:
 0
 
 """
+
+String=input().strip()
+K=int(input())
+Count=0
+List=[]
+for ele in range(len(String)-3):
+    if int(String[ele:ele+4])%K==0 and String[ele]!='0':
+        List.append(int(String[ele:ele+4]))
+        
+print(len(List))
