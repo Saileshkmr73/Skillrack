@@ -61,3 +61,20 @@ Output:
 62 90
 69 85
 """
+
+Row,Col=map(int,input().split())
+Matrix=[list(map(int,input().split())) for index in range(Row)]
+K=int(input())
+maxsum,count=0,0
+for ele in range(Row-2,-1,-2):
+    for foo in range(Col-2,-1,-2):
+        subMatrix=[]
+        for index1 in range(ele,ele+2):
+            for index2 in range(foo,foo+2):
+                subMatrix.append(Matrix[index1][index2])
+        if sum(subMatrix)>=maxsum and count<K:
+            Final_Matrix=subMatrix
+            maxsum=sum(subMatrix)
+        count+=1 
+print(*Final_Matrix[:2])
+print(*Final_Matrix[2:])
