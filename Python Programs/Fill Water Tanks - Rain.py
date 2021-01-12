@@ -50,3 +50,10 @@ Output:
 13
 
 """
+Num=int(input())
+list_A=list(map(int,input().split()))
+list_B=list(map(int,input().split()))
+array=[index[0]-index[1] for index in zip(list_A,list_B)]
+k=max(array)
+array=[k-index for index in array]
+print(sum(array))
