@@ -44,3 +44,54 @@ Output:
 
 """
 
+Code in Python:
+
+Num,Temp=map(int,input().split())
+Array=list(map(int,input().split()))
+for element in range(Temp,1001,Temp):
+    newArray=[0]*Num
+    for index in range(Num):
+        if Array[index]==1:
+            newArray[index]=1
+            newArray[(index-1)%Num]=1
+            newArray[(index+1)%Num]=1
+    Array=newArray
+    for i in Array:
+        if i==0:
+            break
+    else:
+        print(element)
+        break
+
+
+
+Code in C:
+   
+
+#include<stdio.h>
+
+#include <stdlib.h>
+
+int main() {
+    int n, s, f = 0, ma = 0, m = 0, k = -1;
+    scanf("%d%d", & n, & s);
+    char a[n];
+    for (int i = 0; i < n; i++) {
+        scanf("%d", & a[i]);
+        if (a[i] == 0) m = 1;
+        if (k == -1 && a[i]) k = i;
+    }
+    if (m) {
+        for (int i = k + 1; i != (k - 1 == -1 ? n - 1 : k - 1); i = (i + 1) % n) {
+            if (a[(i == n - 1 ? 0 : i + 1)] || a[(i == 0 ? n - 1 : i - 1)]) {
+                ma = ma < f ? f : ma;
+                f = 0;
+            } else
+                f++;
+        }
+        ma = ma < f ? f : ma;
+    }
+    m += (ma / 2) + (ma & 1);
+    printf("%d", s * m);
+}
+
