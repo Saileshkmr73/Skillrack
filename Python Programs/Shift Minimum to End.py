@@ -46,3 +46,12 @@ Output:
 6 2 1 4 5 3
 
 """
+
+Num=int(input())
+Array=list(map(int,input().split()))
+for Index in range(1,int(input())+1):
+    if Array[0]<Array[1]:
+        Array.append(Array.pop(0))
+    else:
+        Array.append(Array.pop(1))
+print(*Array)
