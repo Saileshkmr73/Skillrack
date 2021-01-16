@@ -53,3 +53,40 @@ Output:
 10
 
 """
+Python Code:
+
+Num=int(input())
+Array=list(map(int,input().split()))
+Temp=int(input())
+Array=set(Array)
+counter=0
+for index in range(1,Temp):
+    if index not in Array:
+        if index+2<=Temp and index+2 not in Array:
+            counter+=1 
+        if index&1 and index+1 not in Array:
+            counter+=1
+print(counter)
+
+
+/* C Code by Abi Karthcik */
+
+#include <iostream> 
+#include<map>
+using namespace std;
+
+int main()
+{
+    map<int,bool> a;
+    int n,b,x,s=0;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&b);
+        a[b]=1;
+    }
+    scanf("%d",&x);
+    for(int i=0;i<x;i+=2){
+        s+=(!(a[i+1]||a[i])+!(a[i+2]||a[i])+!(a[i+3]||a[i+1]));
+    }
+    printf("%d",s);
+}
