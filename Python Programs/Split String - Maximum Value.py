@@ -41,3 +41,15 @@ Output:
 1010 10
 
 """
+
+string=input().strip()
+temp=0
+ele=0
+if(string=='10'):
+    print(1,0)
+    quit()
+for index in range(1,len(string)):
+    if int(str(string[:index].count('0'))+str(string[index:].count('1')))>temp:
+        temp=int(str(string[:index].count('0'))+str(string[index:].count('1')))
+        ele=index
+print(string[:ele],string[ele:])
