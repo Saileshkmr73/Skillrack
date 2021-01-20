@@ -1,4 +1,6 @@
-﻿Alphabet for Digit
+﻿"""
+Alphabet for Digit
+
 Alphabet for Digit: Given an integer N as input, the program must print the lower case alphabets (from a to i) in the position of the digits (from 1 to 9) in the given integer.
 Boundary Condition(s):
 1 <= N <= 9999999999999999999 
@@ -16,6 +18,9 @@ Input:
 987
 Output:
 ihg
+
+"""
+
 def reverse(n):
     rev=0
     while(n>0):
