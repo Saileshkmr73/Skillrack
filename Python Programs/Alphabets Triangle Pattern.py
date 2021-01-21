@@ -42,3 +42,12 @@ Y Z A
 Y Z A B
 
 """
+
+
+num1,num2=map(int,input().split())
+Alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+num1=num1-1
+for i in range(num1,num1+num2):
+    for j in range(num1,i+1):
+        print(Alpha[j%26],end=" ")
+    print()
