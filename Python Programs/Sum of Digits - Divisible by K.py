@@ -39,3 +39,13 @@ There are 9 integers from 1 to 100 having the sum of digits divisible by 10.
 So 9 is printed as the output.
 
 """
+
+N,K=map(int,input().split())
+Temp=0
+for foo in range(1,N+1):
+    c=0
+    for bar in str(foo):
+        c+=int(bar)
+    if c%K==0:
+        Temp+=1
+print(Temp)
