@@ -37,3 +37,47 @@ Output:
 NO
 
 """
+
+n=int(input())
+s=0;c=0;k=0
+List=[int(i) for i in input().split()]
+for i in range(n):
+    s+=List[i]
+s/=3
+for i in range(n):
+    if k==s:
+        c+=1
+    else:
+        c+=0
+    if k==s:
+        c+=0
+    else:
+        c+=List[i]
+    if k==s:
+        c+=1
+    else:
+        c+=0
+if c>=3:
+    print("YES")
+else:
+    print("NO")
+
+--------------------------------------------
+
+n=int(input())
+s=0;c=0;k=0
+my_list=[int(i) for i in input().split()]
+for i in range(n):
+    s+=my_list[i]
+s/=3
+for i in range(n):
+    c+=(k==s)
+    if k==s:
+        k+=0
+    else:
+        k+=my_list[i]
+    c+=(k==s)
+if c>=3:
+    print("YES")
+else:
+    print("NO")
