@@ -40,3 +40,13 @@ LvmjeHopt
 
 """
 
+s=list(input().strip())
+l=list(map(int,input().split()))
+for i in range(0,len(l)):
+    for j in range(0,i+1):
+        for k in range(1,l[i]+1):
+            a=ord(s[j])+1
+            if a==123 or a==91:
+                a-=26
+            s[j]=chr(a)
+print(''.join(s))
