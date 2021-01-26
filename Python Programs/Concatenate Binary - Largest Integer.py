@@ -31,3 +31,13 @@ Input:
 Output:
 88
 """
+
+num1,num2=map(int,input().split())
+bin1=bin(num1)[2:]
+bin2=bin(num2)[2:]
+x=int(bin1+bin2,2)
+y=int(bin2+bin1,2)
+if x>y:
+    print(x)
+else:
+    print(y)
