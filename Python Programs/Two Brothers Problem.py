@@ -74,3 +74,29 @@ Output:
 7 5000.00 0.00 1000.00
 
 """
+
+l1=list(map(int,input().split()))
+l2=list(map(int,input().split()))
+n=int(input())
+l=list(map(int,input().split()))
+em,ef,ym,yf=0,0,0,0 
+for i in l:
+    if i>0 and i%2==0:
+        em+=1 
+    elif i<0 and i%2==0:
+        ef+=1 
+    elif i>0 and i%2==1:
+        ym+=1 
+    else:
+        yf+=1 
+x1,x2,x3=l1[0]/(ef+em),l1[1]/ef,l1[2]/em
+y1,y2,y3=l2[0]/(ym+yf),l2[1]/yf,l2[2]/ym
+for i in l:
+    if i>0 and i%2==0:
+        print(i,"%.2f"%x1,"0.00","%.2f"%x3)
+    elif i<0 and i%2==0:
+        print(i,"%.2f"%x1,"%.2f"%x2,"0.00")
+    elif i>0 and i%2==1:
+        print(i,"%.2f"%y1,"0.00","%.2f"%y3)
+    else:
+        print(i,"%.2f"%y1,"%.2f"%y2,"0.00")
