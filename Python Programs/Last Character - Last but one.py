@@ -39,3 +39,16 @@ Output:
 
 
 """
+
+#Your code below
+s=input().strip()
+start=-1
+l=len(s)
+for i in range(l-2,-1,-1):
+    if s[i]==s[-1]:
+        start=i
+        break
+if (start==-1):
+    print("-1")
+else:
+    print(s[start:])
