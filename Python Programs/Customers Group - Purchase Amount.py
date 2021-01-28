@@ -51,3 +51,15 @@ Output:
 950 PQR, abcd, mno
 
 """
+
+
+n = int(input())
+d = {}
+for i in range(n):
+    name,amnt = input().split(); amnt = int(amnt)
+    if amnt not in d.keys(): d[amnt] = [name]
+    else: d[amnt].append(name)
+l = sorted(d,reverse = 1)
+for i in l:
+    print(i,end=' ')
+    print(*sorted(d[i]),sep=', ')
