@@ -68,3 +68,19 @@ B = 1 -> (X = 3) 4 4 3 6 5 2
 B = 2 -> (X = 1) 3 3 2 5 4 1
 B = 3 -> (X = 3) The player loses his life and the game ends (the life of the 3rd dragon and 6th dragon goes below 0), so Game Over is printed.
 """
+d=int(input())
+a=list(map(int,input().split()))
+x=int(input())
+b=list(map(int,input().split()))
+i=0
+lose=0
+while i!=x:
+    for j in range(d):
+        a[j]-=b[i]
+        if a[j]<0:
+            lose=1
+    if lose:
+        break
+    print(*a)
+    i+=1
+print("Game Over")
