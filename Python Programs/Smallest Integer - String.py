@@ -49,3 +49,17 @@ Output:
 7
 """
 
+#Your code below
+n=int(input())
+for index in range(n):
+    s=input().strip()
+    l=list(s.split())
+    h=[]
+    for i in l:
+        if i.isdigit():
+            h.append(i)
+    h=[int(i) for i in h]
+    if len(h)==0:
+        print(-1)
+    else:
+        print(min(sorted(h)))
