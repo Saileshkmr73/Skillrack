@@ -35,3 +35,15 @@ Input:
 Output:
 NO
 """
+
+n=int(input())
+while n>0:
+    if n==5 or n==3:
+        print("YES")
+        break
+    if n%3!=0:
+        n-=5
+    else:
+        n//=3
+else:
+    print("NO")
