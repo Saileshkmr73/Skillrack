@@ -74,3 +74,21 @@ PQR
 Stu
 mno
 """
+
+x,y=[],[]
+for i in range(1,int(input())+1):
+    n,e=input().split()
+    x.append([n,int(e)])
+for j in range(1,int(input())+1):
+    n,e=input().split()
+    y.append([n,int(e)])
+z=int(input())
+x.sort(key=lambda k:(-k[1],k[0]))
+y.sort(key=lambda k:(-k[1],k[0]))
+r=x[:2]+y[:2]
+rr=x[2:]+y[2:]
+rr.sort(key=lambda k:(-k[1],k[0]))
+r+=rr[:z-4]
+r.sort(key=lambda k:(-k[1],k[0]))
+for i in r:
+    print(i[0])
