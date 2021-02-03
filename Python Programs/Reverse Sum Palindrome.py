@@ -35,3 +35,12 @@ Here N = 8.
 The sum of 8 and its reverse 8 is 16 which is NOT a palindromic integer.
 So the next largest palindromic integer 16 is 22, which is printed as the output.
 """
+s=input().strip()
+b=s[::-1]
+c=int(s)+int(b)
+if str(c)==str(c)[::-1]:print(c)
+else:
+    for i in range(c+1,1000000000):
+        if str(i)==str(i)[::-1]:
+            print(i)
+            exit()
