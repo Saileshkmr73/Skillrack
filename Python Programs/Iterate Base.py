@@ -84,3 +84,14 @@ while k!=c:
     c=k
     k=s(k,max(k)+1)
 print(*c,sep="")
+
+
+============================
+
+
+a=input()
+b,a=str(int(a,ord(max(a))-(54 if max(a).isalpha() else 47))),0
+while a!=b:
+    a=b
+    b=str(int(a,ord(max(a))-47))
+print(a)
