@@ -39,3 +39,18 @@ Input:
 Output:
 1,3-6
 """
+from itertools import groupby
+def to_ranges(iterable):
+    iterable = sorted(set(iterable))
+    for key, group in groupby(enumerate(iterable),lambda t: t[1] - t[0]):
+        group = list(group)
+        yield group[0][1], group[-1][1]
+n=int(input())
+k=(list(to_ranges(list(map(int,input().split())))))
+a=[]
+for i in k:
+    if len(set(i))==1:
+        a.append(str(i[0]))
+    else:
+        a.append('-'.join([str(j) for j in i]))
+print(','.join(a))
