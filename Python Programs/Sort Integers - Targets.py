@@ -48,3 +48,16 @@ Input:
 Output:
 29 36 38 49
 """
+
+n=int(input())
+sortIntegers=list(map(int,input().split()))
+t=int(input())
+if sortIntegers.count(t)<2 or len(set(sortIntegers))==1:
+    print(-1)
+else:
+    firstInd=sortIntegers.index(t)+1
+    lastInd=sortIntegers[::-1].index(t)
+    if lastInd==0:
+        print(*sorted(sortIntegers[firstInd:-1]))
+    else:
+        print(*sorted(sortIntegers[firstInd:-lastInd-1]))
