@@ -41,3 +41,6 @@ Output:
 
 
 """
+n = input()
+a=sorted(map(int, input().split()))
+print(max(abs(x-y) for x,y in zip(a,a[1:])))
