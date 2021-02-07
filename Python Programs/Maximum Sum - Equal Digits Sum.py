@@ -47,3 +47,17 @@ Input:
 Output:
 -1
 """
+a=int(input())
+b,c,max1=list(map(int,input().split())),[],-1
+for i in b:
+    sum=0
+    while i!=0:
+        rem=i%10
+        i=i//10
+        sum=sum+rem
+    c.append(sum)
+for i in range(0,a):
+    for j in range(i+1,a):
+        if c[i]==c[j]:
+            max1=max(max1,b[i]+b[j])
+print(max1)
