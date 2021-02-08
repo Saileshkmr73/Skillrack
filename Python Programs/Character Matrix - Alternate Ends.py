@@ -73,3 +73,10 @@ cpwEx
 Erblo
 
 """
+m,n=map(int,input().split())
+li=[ list(input().split()) for i in range(m) ]
+for i in range(1,m,2):
+    print(*li[i-1][:i],sep="")
+    print(*li[i][-i-1:],sep="")
+if m%2==1:
+    print(*li[-1][:m],sep="")
