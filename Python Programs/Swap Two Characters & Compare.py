@@ -45,3 +45,15 @@ NO
 
 
 """
+a=list(input().strip())
+b=list(input().strip())
+l=len(a)
+for i in range(l):
+    for j in range(i+1,l):
+        a[i],a[j]=a[j],a[i]
+        if(a==b):
+            print("YES")
+            exit()
+        a[i],a[j]=a[j],a[i]
+        
+print("NO")
