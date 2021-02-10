@@ -83,3 +83,18 @@ Output:
 54 73 35 87 42 90 76 67 45 79
 54 69 27 17 11 50 36 11 28 10
 """
+R,C=map(int,input().split())
+matrix=[list(map(int,input().split())) for row in range(R)]
+for row in range(R):
+    for col in range(C):
+        if col%2==0:
+            if row<R//2:
+                print(matrix[R//2+row][C-col-1],end=" ")
+            else:
+                print(matrix[row][col],end=" ")
+        else:
+            if row<R//2:
+                print(matrix[row][col],end=" ")
+            else:
+                print(matrix[row-R//2][C-col-1],end=" ")
+    print()
